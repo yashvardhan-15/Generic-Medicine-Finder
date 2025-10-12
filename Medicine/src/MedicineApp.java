@@ -132,7 +132,7 @@ public class MedicineApp extends JFrame {
         }
 
         try (Connection connection = DatabaseConnection.getConnection()) {
-            String query = "SELECT generic_substitute, dosage, brand, price, constituents, accuracy FROM medicines WHERE medicine_name = ?";
+            String query = "SELECT generic_substitute, dosage, brand, price, salt_name, availability FROM medicines WHERE medicine_name = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, medicineName);
 
@@ -142,16 +142,16 @@ public class MedicineApp extends JFrame {
                 String dosage = resultSet.getString("dosage");
                 String brand = resultSet.getString("brand");
                 double price = resultSet.getDouble("price");
-                String constituents = resultSet.getString("constituents");
-                String accuracy = resultSet.getString("accuracy");
+                String saltName = resultSet.getString("salt_name");
+                String availability = resultSet.getString("availability");
 
                 resultLabel.setText("<html><div style='padding:10px;'>" +
                         "<strong style='color:#2E8B57;'>Generic Substitute:</strong> " + substitute + "<br><br>" +
                         "<strong style='color:#2E8B57;'>Dosage:</strong> " + dosage + "<br><br>" +
                         "<strong style='color:#2E8B57;'>Brand:</strong> " + brand + "<br><br>" +
-                        "<strong style='color:#2E8B57;'>Price:</strong> ₹" + String.format("%.2f", price) + "<br><br>" +
-                        "<strong style='color:#2E8B57;'>Constituents:</strong> " + constituents + "<br><br>" +
-                        "<strong style='color:#2E8B57;'>Accuracy:</strong> " + accuracy + "%</div></html>");
+                        "<strong style='color:#2E8B57;'>Price:</strong> Rs. " + price + "<br><br>" +
+                        "<strong style='color:#2E8B57;'>Salt Name:</strong> " + saltName + "<br><br>" +
+                        "<strong style='color:#2E8B57;'>Availability:</strong> " + availability + "</div></html>");
             } else {
                 resultLabel.setText("<html><font color='red'>No substitute found for " + medicineName + "</font></html>");
             }

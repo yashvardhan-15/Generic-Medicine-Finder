@@ -8,7 +8,7 @@ public class DatabaseConnection {
 
     private static final String URL = "jdbc:mysql://localhost:3306/medicines_db";
     private static final String USER = "root";
-    private static final String PASSWORD = ""; // Ensure your MySQL root user password is correct
+    private static final String PASSWORD = "bihari"; // Ensure your MySQL root user password is correct
     private static final Logger LOGGER = Logger.getLogger(DatabaseConnection.class.getName());
 
     public static Connection getConnection() throws SQLException {
