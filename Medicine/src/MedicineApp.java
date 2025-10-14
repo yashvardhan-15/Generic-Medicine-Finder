@@ -101,7 +101,7 @@ public class MedicineApp extends JFrame {
         GradientPanel footerPanel = new GradientPanel(new Color(65, 105, 225), new Color(30, 144, 255));
         footerPanel.setPreferredSize(new Dimension(0, 50));
         footerPanel.setLayout(new GridBagLayout());
-        JLabel footerLabel = new JLabel("© 2024 Generic Medicine Finder");
+    JLabel footerLabel = new JLabel("© 2025 Generic Medicine Finder");
         footerLabel.setFont(new Font("Arial", Font.ITALIC, 16));
         footerLabel.setForeground(Color.WHITE);
         footerLabel.setHorizontalAlignment(SwingConstants.CENTER);
