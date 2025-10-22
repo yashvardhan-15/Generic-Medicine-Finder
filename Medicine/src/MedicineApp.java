@@ -20,56 +20,6 @@ public class MedicineApp extends JFrame {
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
-        GradientPanel mainPanel = new GradientPanel(new Color(240, 255, 255), new Color(135, 206, 250));
-        mainPanel.setLayout(new BorderLayout());
-
-        // Header with left light color to darker right color gradient
-        GradientPanel headerPanel = new GradientPanel(new Color(173, 216, 230), new Color(30, 144, 255)); // Light blue to darker blue
-        headerPanel.setPreferredSize(new Dimension(0, 100)); // Increased header height
-        headerPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 20, 20)); // Center aligned with vertical spacing
-
-        // Load, resize, and add the logo to the header
-        ImageIcon logoIcon = new ImageIcon("/Users/yasharthkesarwani/NetBeansProjects/Medicine/src/Resources/images/logo.png");
-        Image logoImage = logoIcon.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH); // Resize logo
-        JLabel logoLabel = new JLabel(new ImageIcon(logoImage));
-
-        // Header label
-        JLabel headerLabel = new JLabel("Welcome to the Generic Medicine Finder");
-        headerLabel.setFont(new Font("Arial", Font.BOLD, 29));
-        headerLabel.setForeground(Color.WHITE);
-
-        // Adding logo and header label to the header panel
-        headerPanel.add(logoLabel);
-        headerPanel.add(headerLabel);
-
-        mainPanel.add(headerPanel, BorderLayout.NORTH);
-
-        JPanel bodyPanel = new JPanel();
-        bodyPanel.setOpaque(false);
-        bodyPanel.setLayout(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(15, 15, 15, 15);
-
-        JLabel medicineLabel = new JLabel("Enter Medicine Name:");
-        medicineLabel.setFont(new Font("Arial", Font.PLAIN, 20));
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        bodyPanel.add(medicineLabel, gbc);
-
-        medicineNameField = new RoundedTextField(30);
-        medicineNameField.setFont(new Font("Arial", Font.PLAIN, 18));
-        medicineNameField.setBackground(Color.WHITE);
-
-        gbc.gridx = 1;
-        bodyPanel.add(medicineNameField, gbc);
-
-        searchButton = new RoundedButton("🔍 Find Substitute");
-        searchButton.setFont(new Font("Arial", Font.BOLD, 16));
-        searchButton.setForeground(Color.WHITE);
-        searchButton.setBackground(new Color(30, 144, 255));
-        searchButton.setFocusPainted(false);
-        searchButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
-
         searchButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 searchButton.setBackground(new Color(255, 165, 0));
