@@ -1,1 +1,9 @@
-# Medicine-Substitute
+The Generic Medicine Finder Application is a Java Swing-based desktop application designed to assist users in locating generic substitutes for branded medicines efficiently. With the rising costs of healthcare and the increasing prevalence of generic medications, this application serves as a valuable tool for consumers seeking cost-effective alternatives to their prescribed drugs.
+
+The application features a user-friendly interface that allows users to enter the name of a branded medicine into a rounded text field. Upon clicking the search button, the application queries a MySQL database containing comprehensive information about medicines and their generic counterparts. The results are displayed clearly, providing users with essential details such as the generic substitute's name, dosage, brand, price, constituents, and the accuracy of the suggestion.
+
+Key functionalities of the application include robust input validation to handle user errors gracefully and informative error messages for invalid or empty inputs. If a match is not found, the application notifies users, ensuring a smooth user experience.
+
+In addition to its core functionalities, the application incorporates potential enhancements such as advanced filtering options based on price, brand, and accuracy, as well as the capability to suggest similar medicines when exact matches are unavailable. This design not only promotes usability but also encourages informed decision-making among users regarding their medication options.
+
+Overall, the Generic Medicine Finder Application aims to empower users by making essential healthcare information easily accessible, ultimately contributing to better health outcomes and improved cost management in pharmaceutical expenditures. The project underscores the importance of leveraging technology to enhance healthcare accessibility and education.
